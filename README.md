@@ -1,7 +1,7 @@
 - 👋 GREETINGS, I am none other than @Wiggle-Ryutsuki 〜(꒪꒳꒪)〜
 - 👀 I’m interested in studying computer science
 - 🌱 I’m currently learning Python and Data Science
-- 😄 Pronouns: She/Her/Her Majesty the All Mighty Wiggle
+- 😄 Pronouns: She/Her/Her Majesty The All Mighty Wiggle
 - ⚡ Fun fact: I have 2 crochet bees overseeing my work.
 
 <!---
