@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" href="images/favicon.ico">
+
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts/popup.js"></script>
+
+  <title>AniTime</title>
+  </head>
+  <body>
+      <!-- Date section (Displays date, can navigate to previous and next day) -->
+      <div class="card">
+        <div class="grid-container">
+
+          <div class="nav-arrow"><button id="previous" class="button"><span id="left-arrow" class="material-icons">arrow_back_ios_new</span></button></div>
+
+          <div id="card-con" class="day-column">
+            <div class="rows">
+              <div class="day" id="day_header">Day</div>
+              <div class="date" id="date_header">Date</div>
+            </div>
+          </div>
+
+          <div class="nav-arrow"><button id="next" class="button"><span id="right-arrow" class="material-icons">arrow_forward_ios</span></button></div>
+
+        </div>
+      </div>
+
+      <!-- Upcoming Table (Displays the anime schedule) -->
+      <div class="schedule">
+        <div class="table" id="upcoming-table">
+          <table id="upcoming-episodes" class="anime-table">
+
+            <thead>
+              <tr>
+                <td colspan="3" class="upcoming-time">
+                  <div class="time-tag">TIME</div>
+                </td>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr class="anime-container">
+                <tr>
+                  <td class="time-cell">TIME</td>
+                </tr>
+
+                <tr>
+                  <td class="bullet-cell">
+                    <div><span class="material-icons-outlined">circle</span></div>
+                  </td>
+
+                  <td class="anime-info-cell">
+                    <div class="anime-title">Anime Title</div>
+                    <div class="anime-ep">Ep X</div>
+                  </td>
+                </tr>
+              </tr>
+            </tbody>
+
+          </table>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
