@@ -1,0 +1,15 @@
+Maimoona Aziz
+
+sort1 uses: Bubble Sort
+
+How do you know?: Although it had similar runtimes to sort3, it was quite slower by at least 0.1 seconds.
+                  But when it ran on the sorted problems, especially sorted50000.txt, it was faster.
+
+sort2 uses: Merge Sort
+
+How do you know?: This took the shortest amount of time to sort out of all three.
+                  This was especially visible during the problems with 50000 numbers — sort1 and sort3 would take at least 1 second or more, whereas sort2 stays under 1 second.
+
+sort3 uses: Selection Sort
+
+How do you know?: It was slower than sort2 but slightly faster than sort1.
