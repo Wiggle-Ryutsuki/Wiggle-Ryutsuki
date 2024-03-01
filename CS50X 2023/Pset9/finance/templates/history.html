@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <div class="header">
+        <h1>History</h1>
+    </div>
+
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Symbol</th>
+                    <th>Company</th>
+                    <th>Shares</th>
+                    <th>Price</th>
+                    <th>Transaction Date</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    {% if history %}
+                    {% for h in history %}
+                    <tr>
+                        <td> {{ h.symbol }} </td>
+                        <td> {{ h.name }} </td>
+                        {% if h.shares > 0 %}
+                            <td style="color:green"> + {{ h.shares }} </td>
+                        {% else %}
+                            <td style="color:red"> {{ h.shares }} </td>
+                        {% endif %}
+                        <td> {{ h.price | usd }} </td>
+                        <td> {{ h.timestamp }} </td>
+                    </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td> - </td>
+                        <td> - </td>
+                        <td> - </td>
+                        <td> - </td>
+                        <td> - </td>
+                    </tr>
+                {% endif %}
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

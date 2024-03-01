@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="quizstyle.css" rel="stylesheet">
+        <title>Quiz</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function ()
+            {
+                let correct = document.querySelectorAll(".correct");
+
+                let check = document.querySelector("#check");
+                check.addEventListener("click", function ()
+                {
+                    // Initialize a variable to count correct answers
+                    let score = 0;
+
+                    // Loop through each correct answer element
+                    for (let i = 0; i < correct.length; i++)
+                    {
+                        let answer = correct[i];
+
+                        if (answer.checked)
+                        {
+                            score++;
+
+                            answer.parentElement.style.color = "#00aa00";
+                            answer.parentElement.style.backgroundColor = "#e1ffd9";
+                        }
+                        else
+                        {
+                            answer.parentElement.style.color = "#ff0000";
+                            answer.parentElement.style.backgroundColor = "#ffd9d9";
+                        }
+
+                        answer.disabled = true; // Disable the radio buttons after checking
+                    }
+                    let result = document.querySelector("#feedback");
+                    result.textContent = `You got ${score} out of ${correct.length} correct!`;
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand mr-auto" href="hobbies.html">Hobbies</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ml-auto">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link" href="passion.html">My Passion</a>
+                        <a class="nav-link" href="goals.html">My Goals</a>
+                        <a class="nav-link" href="hobbies.html">My Hobbies</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>QUIZ: Hobbies and Fun Facts</h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="section" style="padding:20px">
+                <h1 id="feedback"></h1>
+                <hr>
+
+                <div class="row">
+                    <h3> Question 1: What is the Japanese art of folding paper into various shapes, often associated with making paper cranes? </h3>
+
+                    <ul style="list-style-type:none;">
+                        <li><input type="radio" name="q1" class="correct">Origami</li>
+                        <li><input type="radio" name="q1" class="incorrect">Calligraphy</li>
+                        <li><input type="radio" name="q1" class="incorrect">Acrylic Pouring</li>
+                        <li><input type="radio" name="q1" class="incorrect">Pottery</li>
+                    </ul>
+                </div>
+
+                <div class="row">
+                    <h3> Question 2: Which hobby involves painting on canvas using a variety of colors, techniques, and brushstrokes to create art? </h3>
+
+                    <ul style="list-style-type:none;">
+                        <li><input type="radio" name="q2" class="incorrect">Pottery</li>
+                        <li><input type="radio" name="q2" class="incorrect">Knitting</li>
+                        <li><input type="radio" name="q2" class="incorrect">Origami</li>
+                        <li><input type="radio" name="q2" class="correct">Painting</li>
+                    </ul>
+                </div>
+
+                <div class="row">
+                    <h3> Question 3: What do you call the activity of capturing images with a camera, often exploring different angles and lighting? </h3>
+
+                    <ul style="list-style-type:none;">
+                        <li><input type="radio" name="q3" class="incorrect">Sculpting</li>
+                        <li><input type="radio" name="q3" class="incorrect">Gardening</li>
+                        <li><input type="radio" name="q3" class="correct">Photography</li>
+                        <li><input type="radio" name="q3" class="incorrect">Bird Watching</li>
+                    </ul>
+                </div>
+
+                <div class="row">
+                    <h3> Question 4: Which hobby is known for creating intricate designs using needle and thread on fabric? </h3>
+
+                    <ul style="list-style-type:none;">
+                        <li><input type="radio" name="q4" class="incorrect">Gardening</li>
+                        <li><input type="radio" name="q4" class="incorrect">Calligraphy</li>
+                        <li><input type="radio" name="q4" class="correct">Cross-Stitching</li>
+                        <li><input type="radio" name="q4" class="incorrect">Origami</li>
+                    </ul>
+                </div>
+
+                <div class="row">
+                    <h3> Question 5: What hobby involves arranging and caring for miniature trees or shrubs in containers? </h3>
+
+                    <ul style="list-style-type:none;">
+                        <li><input type="radio" name="q5" class="incorrect">Gardening</li>
+                        <li><input type="radio" name="q5" class="correct">Bonsai</li>
+                        <li><input type="radio" name="q5" class="incorrect">Acrylic Pouring</li>
+                        <li><input type="radio" name="q5" class="incorrect">Football</li>
+                    </ul>
+                </div>
+
+                <div class="row">
+                    <h3> Question 6: Which hobby focuses on designing and creating beautiful handwriting, often using special pens and ink? </h3>
+
+                    <ul style="list-style-type:none;">
+                        <li><input type="radio" name="q6" class="incorrect">Tennis</li>
+                        <li><input type="radio" name="q6" class="correct">Calligraphy</li>
+                        <li><input type="radio" name="q6" class="incorrect">Cross-Stitching</li>
+                        <li><input type="radio" name="q6" class="incorrect">Painting</li>
+                    </ul>
+                </div>
+
+                <div class="row:">
+                    <h3> Question 7: What is the name of the hobby where you create decorative patterns or images by arranging small colored pieces, often made of glass or ceramic? </h3>
+
+                    <ul style="list-style-type:none;">
+                        <li><input type="radio" name="q7" class="incorrect">Gardening</li>
+                        <li><input type="radio" name="q7" class="incorrect">Sculpting</li>
+                        <li><input type="radio" name="q7" class="correct">Mosaic Art</li>
+                        <li><input type="radio" name="q7" class="incorrect">Sketching</li>
+                    </ul>
+                </div>
+
+                <div class="row">
+                    <h3> Question 8: Which hobby involves creating sculptures by shaping clay or other materials with your hands? </h3>
+
+                    <ul style="list-style-type:none;">
+                        <li><input type="radio" name="q8" class="incorrect">Cycling</li>
+                        <li><input type="radio" name="q8" class="incorrect">Pottery</li>
+                        <li><input type="radio" name="q8" class="incorrect">Cross-Stitching</li>
+                        <li><input type="radio" name="q8" class="correct">Sculpting</li>
+                    </ul>
+                </div>
+
+                <div class="row">
+                    <h3> Question 9: What hobby is all about designing and knitting clothing, blankets, and other items with yarn? </h3>
+
+                    <ul style="list-style-type:none;">
+                        <li><input type="radio" name="q9" class="incorrect">Cycling</li>
+                        <li><input type="radio" name="q9" class="correct">Knitting</li>
+                        <li><input type="radio" name="q9" class="incorrect">Cross-Stitching</li>
+                        <li><input type="radio" name="q9" class="incorrect">Sculpting</li>
+                    </ul>
+                </div>
+
+                <div class="row">
+                    <h3> Question 10: Which hobby is associated with observing and identifying birds in their natural habitats? </h3>
+
+                    <ul style="list-style-type:none;">
+                        <li><input type="radio" name="q10" class="incorrect">Calligraphy</li>
+                        <li><input type="radio" name="q10" class="incorrect">Pottery</li>
+                        <li><input type="radio" name="q10" class="correct">Bird Watching</li>
+                        <li><input type="radio" name="q10" class="incorrect">Sculpting</li>
+                    </ul>
+                </div>
+
+                <button type="submit" id="check">Check Answers</button>
+
+            </div>
+        </div>
+    </body>
+
+</html>

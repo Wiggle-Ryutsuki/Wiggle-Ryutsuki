@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <div class="header">
+        <h1>{{ name }}'s Portfolio</h1>
+    </div>
+
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Symbol</th>
+                    <th>Company</th>
+                    <th>Shares</th>
+                    <th>Current Price per Share</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                    <tr>
+                        {% if stocks %}
+                        {% for s in stocks %}
+                        <tr>
+                            <td> {{ s.symbol }} </td>
+                            <td> {{ s.name }} </td>
+                            <td> {{ s.shares }} </td>
+                            <td> {{ s.price | usd}} </td>
+                            <td> {{ s.total | usd}} </td>
+                        </tr>
+                        {% endfor %}
+                    {% else %}
+                        <tr>
+                            <td> - </td>
+                            <td> - </td>
+                            <td> - </td>
+                            <td> - </td>
+                            <td> - </td>
+                        </tr>
+                    {% endif %}
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="3"></td>
+                    <td style="font-weight:bold;">Cash Balance</td>
+                    {% if cash %}
+                        <td> {{ cash | usd}} </td>
+                    {% else %}
+                        <td> - </td>
+                    {% endif %}
+                </tr>
+                <tr>
+                    <td colspan="3"></td>
+                    <td style="font-weight:bold;">Total</td>
+                    {% if grand_total %}
+                        <td> {{ grand_total | usd}} </td>
+                    {% else %}
+                        <td> - </td>
+                    {% endif %}
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+{% endblock %}

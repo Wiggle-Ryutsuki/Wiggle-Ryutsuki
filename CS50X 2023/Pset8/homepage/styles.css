@@ -1,0 +1,63 @@
+.header {
+    background-image: url("card5.png");
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    color: #000000;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    font-family: lucida;
+
+}
+
+.body{
+    background-color:#567798;
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.section {
+    padding: 20px;
+}
+
+body {
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    font-family: Pacifico;
+    text-align: center;
+}
+
+.col {
+    overflow: hidden;
+}
+
+p {
+    max-width: 100%;
+}
+
+.divider {
+    height: 2px;
+    background-color: white;
+    margin: 20px 0;
+}
+
+.carousel-section {
+    text-align: center;
+}
+.carousel-inner img {
+    max-width: 100%;
+    height: auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+

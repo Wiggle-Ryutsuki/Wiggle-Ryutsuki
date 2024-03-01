@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Symbol</th>
+                    <th>Company</th>
+                    <th>Current Price per Share</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                    <tr>
+                        <td>{{ quote.symbol }}</td>
+                        <td>{{ quote.name }} </td>
+                        <td>{{ quote.price | usd }}</td>
+                    </tr>
+
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
