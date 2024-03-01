@@ -1,0 +1,12 @@
+If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?
+
+ANS: A listeners audio aura is determined by the average energy, valence, and danceability, of their lists.
+If there is a mix of colors in the aura, we could infer that each color would be related to the individual values of the attributes.
+We could assign the range of averages to be categorized as "high", "medium", or "low", and these ranges could be assigned with with a color.
+
+Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener. What better ways of calculating this aura would you propose?
+
+ANS: There would only be 3 repeating colors if we assign colors only to the range of "high, medium, "low".
+Say if the listerners song tastes change, the output of the audio aura won't change too much because of the repeating colors.
+Perhaps the range of energy, valence, and danceability, could be split into moods like "passion, romantic, rebellious" with sets of colors corresponding inside those moods,
+Then the range of highest to lowest of the average values themselves correspond to how much of which color to output.
